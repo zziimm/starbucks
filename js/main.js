@@ -52,3 +52,17 @@ window.addEventListener('scroll', function () {
       display: 'block'
   });
 }});
+
+// 순차적으로 VISUAL 섹션 내 요소 보이기
+// 나타날 요소(.fade-in)들을 찾기
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+// console.log(fadeEls);
+// 요소들을 하나씩 반복해서 처리!
+fadeEls.forEach(function (fadeEl, index) {
+    // gsap.to(요소, 지속시간, 옵션: {}) 메소드: CSS 속성을 통해 애니메이션 처리
+  gsap.to(fadeEl, 1, {
+    opacity: 1,
+    delay: (index + 1) * 0.7 // 0.7s, 1.4s, 2.1s, 2.8s
+    // delay: 몇 초 뒤에 실행될 것인가?
+  });
+});
