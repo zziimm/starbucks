@@ -44,16 +44,23 @@
   <!-- 그 외 fontawesome, bootstrap icon 등 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
-
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
   <!-- main.css -->
   <link rel="stylesheet" href="./css/main.css">
-
+  
+  
+  <!-- main.js -->
+  <script defer src="./js/main.js"></script>
+  
+  <!-- swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
   <!-- gsap.js -->
   <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- main.js -->
-  <script defer src="./js/main.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -419,6 +426,93 @@
       </div>
       <div class="fade-in">
         <img src="./images/visual_spoon.png" alt="Spoon" class="spoon">
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICE -->
+  <section class="notice">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+      <div class="inner__left">
+        <h2>공지사항</h2>
+        <!-- div.swiper: 공지사항이 슬라이드 될 영역, 슬라이드 라이브러리 사용! -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 스타벅스 플래너 영수증 이벤트</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">스타벅스 애플리케이션 버전 업데이트 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="notice-more">
+          <span class="material-icons">add_circle</span>
+        </a>
+      </div>
+      <div class="inner__right">
+        <h2>스타벅스 프로모션</h2>
+        <div class="toggle-promotion">
+          <span class="material-icons">upload</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTION -->
+  <section class="promotion">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/promotion_slide1.jpg" alt="뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!">
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion_slide2.jpg" alt="기간 내 스타벅스 카드 e-Gift를 3만원 이상 선물 시, 아메리카노 e-쿠폰을 드립니다.">
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion_slide3.jpg" alt="뉴이어 푸드와 제조 음료를 세트로 구매 시, 뉴이어 음료 BOGO(1+1) 쿠폰을 드립니다.">
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion_slide4.jpg" alt="신년 MD 상품 포함 3만원 이상 구매 고객께 아메리카노(톨사이즈) 쿠폰을 드립니다.">
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion_slide5.jpg" alt="DIGITAL LUCKY DRAW 100% 당첨의 행운을 드립니다!">
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev">
+      <span class="material-icons">arrow_back</span>
+    </div>
+    <div class="swiper-button-next">
+      <span class="material-icons">arrow_forward</span>
+    </div>
+  </section>
+
+  <!-- REWARDS -->
+  <section class="rewards">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+      <!-- .btn-group으로 묶는 이유? 한번에 제어 및 조작하려고 -->
+      <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn--reverse sign-up">회원가입</a>
+        <a href="javascript:void(0)" class="btn sign-in">로그인</a>
+        <a href="javascript:void(0)" class="btn gift">e-Gift 선물하기</a>
       </div>
     </div>
   </section>

@@ -8,7 +8,7 @@ body {
   /* 위 속성들은 모두 상속되기에 전체 스타일을 한번에 제어 */
 
   overflow-x: hidden;
-  height: 3000px;
+  /* height: 3000px; */
 }
 
 a {
@@ -315,4 +315,220 @@ header .badges .badge {
 .visual .fade-in {
   /* 투명한 상태에서 시작되도록 세팅 */
   opacity: 0;
+}
+
+/* NOTICE */
+.notice {
+  position: relative;
+}
+.notice .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.notice .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.notice .inner {
+  height: 62px;
+  display: flex;
+}
+.notice .inner__left {
+  /* 비율 나누기 */
+  /* width: 70%; */
+  flex: 7;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+.notice .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .inner__left .swiper {
+  height: 62px;
+  flex-grow: 1;  /* 최대한 늘어나도록 지정 */
+}
+.notice .inner__left .swiper .swiper-slide{
+  display: flex;
+  align-items: center;
+}
+.notice .inner__left .swiper .swiper-slide a{
+  color: #fff;
+}
+.notice .inner__left .notice-more {
+  width: 62px;
+  height: 62px;
+  /* 정중앙 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .inner__left .notice-more .material-icons{
+  color: #fff;
+  font-size: 30px;
+}
+.notice .inner__right {
+  /* 비율 나누기 */
+  /* width: 30%; */
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.notice .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.notice .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
+}
+
+/* PROMOTION */
+.promotion {
+  height: 663px;
+  background-color: #f6f5ef;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.promotion.hide {
+  /* display 속성을 사용하면 애니메이션 효과 못넣음!! 
+    (none -> block 될 때 중간 과정이 없기 때문에)
+  */
+  /* display: none; */
+  height: 0;
+}
+.promotion .swiper {
+  /* 이미지(819px) 슬라이드 3개 && 사이 여백(10px) 2개 = 2477px */
+  width: calc(819px * 3 + 10px * 2);
+  height: 553px;
+  flex-shrink: 0;
+}
+.promotion .swiper-slide {
+  /* 모든 슬라이드는 반투명하게, active 한 것만 불투명하게 
+    => 개발자 도구로 클래스값 확인
+  */
+  opacity: 0.5;
+  transition: opacity 1s;
+  position: relative;
+}
+.promotion .swiper-slide-active {
+  opacity: 1;
+}
+.promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.promotion .swiper-pagination {
+  position: absolute;
+  bottom: 40px;
+  z-index: 1;  /* 헤더의 z-index가 9이기 때문에 1로 덮어씀 */
+}
+.promotion .swiper-pagination .swiper-pagination-bullet {
+  /* 기존 배경색은 투명하게 숨기고, 배경 이미지를 사용 */
+  background-color: transparent;
+  background-image: url('../images/promotion_slide_pager.png');
+  width: 13px;
+  height: 12px;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url('../images/promotion_slide_pager_on.png');
+}
+.promotion .swiper-button-prev,
+.promotion .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  color: #333;
+  transition: 0.4s;
+}
+.promotion .swiper-button-prev {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  left: 50%;
+  margin-left: -480px;
+}
+.promotion .swiper-button-next {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  right: 50%;
+  margin-right: -480px;
+}
+.promotion .swiper-button-prev:hover, 
+.promotion .swiper-button-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+.promotion .swiper-button-prev::after, 
+.promotion .swiper-button-next::after {
+  display: none;
+}
+
+/* REWARDS */
+.rewards {
+  position: relative;
+}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rewards .inner {
+  height: 241px;
+  background-image: url('../images/rewards.jpg');
+}
+.rewards .btn-group {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+}
+.rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+}
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1;  /* Flex Container 내부에서 최대한의 너비를 쓸 수 있도록 */
 }
