@@ -639,3 +639,110 @@ header .badges .badge {
   top: -200px;
   right: 0;
 }
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+
+/* RESERVE COFFEE */
+.reserve-coffee {
+  background-image: url('../images/reserve_bg.jpg');
+}
+.reserve-coffee .inner {
+  height: 400px;
+}
+.reserve-coffee .inner .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .inner .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve-coffee .inner .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite {
+  background-image: url('../images/favorite_bg.jpg');
+}
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+.pick-your-favorite .inner .text-group {
+  display: flex;
+  flex-wrap: wrap;
+  /* 정렬 영역이 충분하면 줄바꿈 되지 않음, 너비를 제한해서 강제로 줄바꿈 */
+  width: 362px;
+  justify-content: flex-end;
+  margin-left: 100px;
+}
+.pick-your-favorite .inner .text-group .title {
+  margin-bottom: 40px;
+}
+.pick-your-favorite .inner .text-group .description {
+  margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store {
+  background-image: url('../images/reserve_store_bg.jpg');
+}
+.reserve-store .inner {
+height: 600px;
+}
+
+/* FIND STORE */
+.find-store {
+  background-image: url('../images/find_store_bg.jpg');
+}
+.find-store .inner {
+  height: 400px;
+}
+.find-store .texture1 {
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find-store .texture2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture1 {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.find-store .picture2 {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.find-store .text-group {
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find-store .text-group .title {
+  margin-bottom: 20px;
+}
+.find-store .text-group .description {
+  margin-bottom: 20px;
+}
