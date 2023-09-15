@@ -81,6 +81,34 @@ img {
   background-color: #fff;
 }
 
+/* 스크롤 시 애니메이션을 공통 스타일로 추가 */
+/* BACK TO POSITION */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-left {
+  /* 오른쪽에서 왼쪽으로 나타나는 */
+  transform: translateX(150px);
+}
+.back-to-position.to-right {
+  /* 왼쪽에서 오른쪽으로 나타나는 */
+  transform: translateX(-150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+
 /* HEADER */
 header {
   background-color: #f6f5f0;
@@ -677,6 +705,11 @@ header .badges .badge {
 /* PICK YOUR FAVORITE */
 .pick-your-favorite {
   background-image: url('../images/favorite_bg.jpg');
+  /* 배경 이미지에 시차 효과 주기 */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .pick-your-favorite .inner {
   padding: 110px 0;
@@ -699,10 +732,49 @@ header .badges .badge {
 /* RESERVE STORE */
 .reserve-store {
   background-image: url('../images/reserve_store_bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .reserve-store .inner {
-height: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  /* 회전하는 요소의 부모 요소에 원근 거리를 추가 */
+  perspective: 600px;
+}
+.reserve-store .medal .front, 
+.reserve-store .medal .back {
+  position: absolute;
+  backface-visibility: hidden; /* 회전된 요소의 뒷면을 숨김 */
+  transition: 1s;
+}
+.reserve-store .medal .front {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 
 /* FIND STORE */
 .find-store {
